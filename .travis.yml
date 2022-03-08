@@ -1,0 +1,24 @@
+language: python
+
+python:
+    - 3.8
+
+env:
+    - SECRET_KEY='django-insecure-mkab%#c-jaln@2e-b)m*3($*%j%c+lfe1+ion*ao!)!tkmsn3v'
+
+install:
+  - pip install -r requirements.txt
+  - pip install black
+  - pip install flake8
+
+before_script:
+  - python manage.py migrate
+
+script:
+  - python manage.py
+  - python -m black . --check
+  - python -m flake8 --max-line-length=92
+  - python -m coverage run --source='.' manage.py test
+
+after_success:
+  - coveralls
