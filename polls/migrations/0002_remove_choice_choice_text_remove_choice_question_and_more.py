@@ -6,28 +6,28 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0001_initial'),
+        ("polls", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='choice',
-            name='choice_text',
+            model_name="choice",
+            name="choice_text",
         ),
         migrations.RemoveField(
-            model_name='choice',
-            name='question',
+            model_name="choice",
+            name="question",
         ),
         migrations.RemoveField(
-            model_name='choice',
-            name='votes',
+            model_name="choice",
+            name="votes",
         ),
         migrations.RemoveField(
-            model_name='question',
-            name='pub_date',
+            model_name="question",
+            name="pub_date",
         ),
         migrations.RemoveField(
-            model_name='question',
-            name='question_text',
+            model_name="question",
+            name="question_text",
         ),
     ]
