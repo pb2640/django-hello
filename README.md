@@ -1,1 +1,1 @@
-"# django-hello" 
+ A hello world App for Practical SOftware Engineering
