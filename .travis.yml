@@ -16,9 +16,9 @@ before_script:
 
 script:
   - python manage.py
-  - python -m black . --check
-  - python -m flake8 --max-line-length=92
-  - python -m coverage run --source='.' manage.py test
+  - black . --check
+  - flake8 --max-line-length=92
+  - coverage run --source='.' manage.py test
  
 after_success:
   - coveralls
