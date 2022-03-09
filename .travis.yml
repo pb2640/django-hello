@@ -1,11 +1,5 @@
 language: python
 
-python:
-    - 3.8
-
-env:
-    - SECRET_KEY='django-insecure-mkab%#c-jaln@2e-b)m*3($*%j%c+lfe1+ion*ao!)!tkmsn3v'
-
 install:
   - pip install -r requirements.txt
   - pip install black
